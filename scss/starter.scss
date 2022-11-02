@@ -1,0 +1,162 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, change you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+
+//
+// Bring in Bootstrap
+//
+
+// Option 1
+//
+// Import all of Bootstrap's CSS
+
+// @import "bootstrap/scss/bootstrap";
+
+// Option 2
+//
+// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
+
+// Toggle global options
+$enable-gradients: true;
+$enable-shadows: true;
+
+// Customize some defaults
+$body-color: #333;
+$body-bg: #fff;
+$border-radius: .4rem;
+$primary: #68a607;
+// $success: #7952b3;
+
+
+@import "bootstrap/scss/functions"; // Required
+@import "bootstrap/scss/variables"; // Required
+@import "bootstrap/scss/mixins"; // Required
+
+@import "bootstrap/scss/root"; // Required
+@import "bootstrap/scss/reboot"; // Required
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/input-group"; // Requires forms
+@import "bootstrap/scss/custom-forms";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/badge";
+@import "bootstrap/scss/jumbotron";
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/progress";
+@import "bootstrap/scss/media";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+@import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/popover";
+@import "bootstrap/scss/carousel";
+@import "bootstrap/scss/spinners";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/print";
+
+
+//
+// Custom styles
+//
+
+@import "fonts";
+
+body {
+  padding: 0;
+  font-size: 0.9rem;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+// Style Bootstrap icons
+.bi {
+  fill: currentcolor;
+}
+.top-banner {
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
+}
+.hotline {
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
+}
+.hotline-text {
+  color: #fff;
+  padding: 5px 10px;
+  background-color: $primary;
+  border-radius: 14px;
+}
+
+/*** Custom Navbar ***/
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background-color: $white;
+}
+.navbar {
+  padding: 0;
+  @media screen and (max-width: 992px) {
+    padding: 0.8rem 0;
+  }
+
+  .navbar-collapse {
+    margin-top: 1px;
+    @media screen and (max-width: 992px) {
+      margin-top: 10px;
+    }
+  }
+}
+.navbar-toggler {
+  border: unset!important;
+}
+.navbar-toggler-icon {
+  width: 1.3em;
+  height: 1.3em;
+}
+.navbar-light .navbar-nav .show, 
+.navbar-light .navbar-nav .active, 
+.navbar-light .navbar-nav .show, 
+.navbar-light .navbar-nav .active,
+.nav-item:hover {
+  background-color: $primary;
+}
+
+.navbar-light .navbar-nav .show>.nav-link, 
+.navbar-light .navbar-nav .active>.nav-link, 
+.navbar-light .navbar-nav .nav-link.show, 
+.navbar-light .navbar-nav .nav-link.active,
+.nav-item:hover > .nav-link {
+  color: $white!important;
+}
+
+.navbar-nav .nav-link {
+  color: $gray-800!important;
+  padding: 5px 1rem!important;
+}
+
+/*** Custom Navbar ***/
