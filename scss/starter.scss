@@ -121,7 +121,7 @@ body {
   .navbar {
     padding: 0;
     @media screen and (max-width: 992px) {
-      padding: 0.8rem 0;
+      padding: 0.4rem 0;
     }
   
     .navbar-collapse {
@@ -167,20 +167,27 @@ body {
   display: flex;
   flex-direction: row;
   margin-top: 20px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     flex-direction: column;
   }
 
   .sidebar {
-    width: 245px;
+    width: 250px;
     background-color: #F6F5F1;
-    @media screen and (max-width: 768px) {
+    display: inline-block;
+    height: 100%;
+    @media screen and (max-width: 992px) {
       width: 100%;
     }
 
     .sidebar-item {
       background: linear-gradient(45deg, #68a607, black);
       box-shadow: 0px 2px 5px $gray-600;
+    }
+    .sidebar-news {
+      max-height: 600px;
+      overflow-y: auto;
+      flex-wrap: nowrap;
     }
     a {
       color: $gray-700;
@@ -213,8 +220,8 @@ body {
   }
   .content {
     padding-left: 25px;
-    width: calc(100% - 270px);
-    @media screen and (max-width: 768px) {
+    width: calc(100% - 275px);
+    @media screen and (max-width: 992px) {
       width: 100%;
       padding-left: 0;
       margin-top: 20px;

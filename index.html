@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.carousel.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/css/starter.css">
-  <title>Nha khoa Tâm Phước</title>
+  <title>Nha khoa Tâm Phước - Trang chủ</title>
 </head>
 
 <body>
@@ -15,20 +16,16 @@
     <header class='sticky-navbar'>
       <!-- TOP BANNER START -->
       <div class="top-banner border-bottom">
-        <div class="container py-3">
+        <div class="container py-2">
           <div class="d-flex justify-content-between align-items-center">
-            <p class='font-14 text-primary font-weight-bold'>Tâm Phước</p>
+            <img src='./assets/images/logo.png' alt='logo' style="height: 46px; width: auto"/>
             <div class="hotline">
               <span class='font-09 text-black-50 mr-2'>
-                <svg class="bi mr-1" width="18" height="18">
-                  <use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#envelope-fill" />
-                </svg>
+                <i class="bi-envelope-fill mr-1"></i>
                 nhakhoatamphuoc@gmail.com
               </span>
               <span class='hotline-text font-09'>
-                <svg class="bi text-white mr-2 pb-1" width="18" height="18">
-                  <use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#telephone" />
-                </svg>0977 992 964</span>
+                <i class="bi-telephone text-white mr-2"></i>0977 992 964</span>
             </div>
           </div>
         </div>
@@ -37,7 +34,7 @@
       <!-- NAVBAR START -->
       <div class="container">
         <nav class="navbar sticky-top navbar-expand-lg navbar-light">
-          <p class='d-lg-none font-14 text-primary font-weight-bold'>Tâm Phước</p>
+          <img class='d-lg-none m-auto pl-5' src='./assets/images/logo.png' alt='logo' style="height: 46px; width: auto"/>
           <button class="navbar-toggler btn-sm" type="button" data-toggle="collapse" data-target="#navbarContent"
             aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -46,10 +43,10 @@
           <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="#">TRANG CHỦ<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/index.html">TRANG CHỦ<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">GIỚI THIỆU</a>
+                <a class="nav-link" href="/index-about-us.html">GIỚI THIỆU</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">BẢNG GIÁ</a>
@@ -125,14 +122,14 @@
             </ul>
           </div>
 
-          <p class='sidebar-item text-center py-2 font-11'>
+          <p class='sidebar-item text-center py-2 font-11 mb-3'>
             <a class='text-white' data-toggle="collapse" href="#collapseNews" role="button" aria-expanded="false"
               aria-controls="collapseNews">
               TIN TỨC NHA KHOA
             </a>
           </p>
           <div class="collapse show" id="collapseNews">
-            <ul class="nav flex-column pb-3">
+            <ul class="nav flex-column sidebar-news pb-3">
               <li class="nav-item nav-news">
                 <a href="#">
                   <div class='d-flex align-items-start p-3'>
@@ -155,7 +152,30 @@
                   </div>
                 </a>
               </li>
+
             </ul>
+          </div>
+
+          <p class='sidebar-item text-center py-2 font-11'>
+            <a class='text-white' data-toggle="collapse" href="#collapseContact" role="button" aria-expanded="false"
+              aria-controls="collapseContact">
+              HỖ TRỢ VÀ HẸN KHÁM
+            </a>
+          </p>
+          <div class="collapse show mt-3" id="collapseContact">
+            <div class='pb-3 px-2'>
+              <p class='font-09'>
+                <i class="bi-telephone-fill text-black-50 mr-1 pb-1"></i>
+                <span class='text-warning font-weight-bold '>0977 992 964</span>
+              </p>
+              <p class='font-09 mt-2'>
+                <i class="bi-envelope-fill text-black-50 mr-1 pb-1"></i>
+                nhakhoatamphuoc@gmail.com
+              </p>
+              <div class='mx-2'>
+                <button class="btn btn-primary btn-block btn-sm mt-4">Hẹn khám</button>
+              </div>
+            </div>
           </div>
         </div>
         <!-- LEFT SIDEBAR END -->
@@ -192,7 +212,8 @@
                   <img src='./assets/images/content1.jpeg' class='img-content-right mr-3' />
                   <div>
                     <p class='text-capitalize font-weight-bold'>Nha khoa tâm phước</p>
-                    <p class='font-08'>Năm mới nha khoa xin giảm giá cho các danh mục phục hình cố định và phục hình ...</p>
+                    <p class='font-08'>Năm mới nha khoa xin giảm giá cho các danh mục phục hình cố định và phục hình ...
+                    </p>
                     <p class='font-07 text-secondary'>02-02-2015 12:21:36 PM</p>
                   </div>
                 </div>
@@ -200,7 +221,8 @@
                   <img src='./assets/images/content1.jpeg' class='img-content-right mr-3' />
                   <div>
                     <p class='text-capitalize font-weight-bold'>Nha khoa tâm phước</p>
-                    <p class='font-08'>Năm mới nha khoa xin giảm giá cho các danh mục phục hình cố định và phục hình ...</p>
+                    <p class='font-08'>Năm mới nha khoa xin giảm giá cho các danh mục phục hình cố định và phục hình ...
+                    </p>
                     <p class='font-07 text-secondary'>02-02-2015 12:21:36 PM</p>
                   </div>
                 </div>
