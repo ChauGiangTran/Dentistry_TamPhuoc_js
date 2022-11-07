@@ -87,7 +87,14 @@ body {
   p {
     margin-bottom: 0;
   }
+  a {
+    color: #333333;
+    &:hover {
+      color: $primary;
+    }
+  }
 }
+
 
 // Style Bootstrap icons
 .bi {
@@ -157,6 +164,53 @@ body {
   .navbar-nav .nav-link {
     color: $gray-800!important;
     padding: 5px 1rem!important;
+  }
+  .dropdown-menu {
+    background-color: $white!important;
+    font-size: 14px!important;
+    margin-top: 0!important;
+    @media screen and (max-width: 768px) {
+      border: 0; 
+      border-radius: 0;
+      box-shadow: unset!important
+    }
+  }
+  .dropdown-item:hover, 
+  .dropdown-item:focus {
+    background: $primary!important;
+    color: $white!important;
+  }
+  .dropdown:hover .dropdown-menu {
+    @media screen and (min-width: 769px) {
+      display: block!important;
+      margin-top: 0; 
+    }
+  }
+  .dropdown-toggle::after {
+    @media screen and (max-width: 768px) {
+      display: none!important;
+    }
+  }
+  .nav-item.dropdown > .nav-link {
+    @media screen and (max-width: 768px) {
+      width: 50%!important;
+    }
+  }
+  .dropdown.show > .expand-dropdown,
+  .dropdown:hover > .expand-dropdown,
+  .dropdown:focus > .expand-dropdown,
+  .dropdown:active > .expand-dropdown {
+    color: $white!important;
+  }
+  .expand-dropdown {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    display: none;
+    color: $gray-800!important;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
   }
 }
 
@@ -251,8 +305,19 @@ body {
       border-radius: 4px;
     }
   }
+  .service-item:not(:last-child),
+  .answer-item:not(:last-child) {
+    border-bottom: 1px solid $gray-200;
+  }
+  
 }
 /*** Custom Content ***/
+
+/*** Custom Card ***/
+.card {
+  box-shadow: 0 2px 4px 0 $gray-400;
+}
+/*** Custom Card ***/
 
 /*** Custom Carousel ***/
 .owl-carousel .owl-nav button.owl-prev,
