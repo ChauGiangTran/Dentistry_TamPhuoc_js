@@ -1,8 +1,8 @@
-# Install dependencies
-npm i
+Install dependencies
+# npm i
 
-# Compile Sass
-npm run css-compile
+Compile Sass
+# npm run css-compile
 
-# Start server and watch Sass
-npm start
+Start server and watch Sass
+# npm start
